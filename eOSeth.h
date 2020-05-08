@@ -60,7 +60,11 @@ put 100nF ceramic capitors between ground and the input of the buttons
 extern IPAddress eosIP;
 extern uint16_t eosPort;
 
-
+/**
+ * @brief send an OSC message
+ * 
+ * @param msg OSC message
+ */
 void sendOSC(OSCMessage& msg);
 
 /**
@@ -425,7 +429,7 @@ class Macro {
 
 	};
 
-class oscButton {
+class OscButton {
 
 	public:
 
@@ -438,7 +442,7 @@ class oscButton {
 	 * @param ip optional destination IP address
 	 * @param port optional destination port
 	 */
-	oscButton(uint8_t pin, String pattern, int32_t integer32, IPAddress ip = eosIP, uint16_t port = eosPort);
+	OscButton(uint8_t pin, String pattern, int32_t integer32, IPAddress ip = eosIP, uint16_t port = eosPort);
 	
 	/**
 	 * @brief Construct a new osc Button object for sending a float value
@@ -449,7 +453,7 @@ class oscButton {
 	 * @param ip optional destination IP address
 	 * @param port optional destination port
 	 */
-	oscButton(uint8_t pin, String pattern, float float32, IPAddress ip = eosIP, uint16_t port = eosPort);
+	OscButton(uint8_t pin, String pattern, float float32, IPAddress ip = eosIP, uint16_t port = eosPort);
 	
 	/**
 	 * @brief Construct a new osc Button object for ssending a String
@@ -460,7 +464,7 @@ class oscButton {
 	 * @param ip optional destination IP address
 	 * @param port optional destination port
 	 */
-	oscButton(uint8_t pin, String pattern, String message, IPAddress ip = eosIP, uint16_t port = eosPort);
+	OscButton(uint8_t pin, String pattern, String message, IPAddress ip = eosIP, uint16_t port = eosPort);
 	
 	/**
 	 * @brief Construct a new osc Button object with no value
@@ -470,7 +474,7 @@ class oscButton {
 	 * @param ip optional destination IP address
 	 * @param port optional destination port
 	 */
-	oscButton(uint8_t pin, String pattern, IPAddress ip = eosIP, uint16_t port = eosPort);
+	OscButton(uint8_t pin, String pattern, IPAddress ip = eosIP, uint16_t port = eosPort);
 	/**
 	 * @brief update the state of the Macro button, must in while() loop
 	 * 
