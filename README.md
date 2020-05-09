@@ -1,9 +1,10 @@
 # eOS for Ethernet
 An object orientated library for Arduino to control ETCs EOS Family Consoles with OSC over Ethernet. The goal of the library is to have a smart toolbox to create your own boxes which covers your needing by endless combinations of hardware elements.
 
-The library depends on the OSC library from CNMAT https://github.com/CNMAT/OSC
-the Ethernet3 library https://github.com/sstaub/Ethernet3
-optional for Teensy MAC address https://github.com/sstaub/TeensyID
+The library depends on:
+- the OSC library from CNMAT https://github.com/CNMAT/OSC
+- the Ethernet3 library https://github.com/sstaub/Ethernet3
+- optional for Teensy MAC address https://github.com/sstaub/TeensyID
 
 
 This library and examples are a replacment for the #lighthack project, it uses Ethernet instead of USB so the library does not depend on the board type.
