@@ -385,7 +385,7 @@ void Macro::update() {
 		} 
 	}
 
-oscButton::oscButton(uint8_t pin, String pattern, int32_t integer32, IPAddress ip, uint16_t port) {
+OscButton::OscButton(uint8_t pin, String pattern, int32_t integer32, IPAddress ip, uint16_t port) {
 	this->pin = pin;
 	this->pattern = pattern;
 	this->integer32 = integer32;
@@ -394,7 +394,7 @@ oscButton::oscButton(uint8_t pin, String pattern, int32_t integer32, IPAddress i
 	typ = INT32;
 	}
 
-oscButton::oscButton(uint8_t pin, String pattern, float float32, IPAddress ip, uint16_t port) {
+OscButton::OscButton(uint8_t pin, String pattern, float float32, IPAddress ip, uint16_t port) {
 	this->pin = pin;
 	this->pattern = pattern;
 	this->float32 = float32;
@@ -403,7 +403,7 @@ oscButton::oscButton(uint8_t pin, String pattern, float float32, IPAddress ip, u
 	typ = FLOAT32;
 	}
 
-oscButton::oscButton(uint8_t pin, const String pattern, String message, IPAddress ip, uint16_t port) {
+OscButton::OscButton(uint8_t pin, const String pattern, String message, IPAddress ip, uint16_t port) {
 	this->pin = pin;
 	this->pattern = pattern;
 	this->message = message;
@@ -414,7 +414,7 @@ oscButton::oscButton(uint8_t pin, const String pattern, String message, IPAddres
 	typ = STRING;
 	}
 
-oscButton::oscButton(uint8_t pin, String pattern, IPAddress ip, uint16_t port) {
+OscButton::OscButton(uint8_t pin, String pattern, IPAddress ip, uint16_t port) {
 	this->pin = pin;
 	this->pattern = pattern;
 	this->ip = ip;
@@ -424,7 +424,7 @@ oscButton::oscButton(uint8_t pin, String pattern, IPAddress ip, uint16_t port) {
 	typ = NONE;
 	}
 
-void oscButton::update() {
+void OscButton::update() {
 	if ((digitalRead(pin)) != last) {
 		if (last == LOW) {
 			last = HIGH;
